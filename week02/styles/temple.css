@@ -1,0 +1,103 @@
+/* “An African proverbs says: A butterfly thinks itself beautiful even if the whole world thinks it ugly.” 
+https://ikpotokin.ng/world/proverbs/
+Please sir/madam accept by imperfect css design.
+
+Happy Birthday to our Dear Beloved Prophet, President Nelson.
+
+12th September, 2025 is my birthday too. Looking forward to reading your birthday wish ===>>> https://september12.ikpotokin.ng/
+
+I'm just having fun while coding this week...
+*/
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f2f2f2;
+  color: #222;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  width: 100%;
+}
+
+/* Main container */
+main {
+  max-width: 800px;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin: 20px 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+picture img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  margin-bottom: 20px;
+}
+
+section {
+  background: #eaeaea;  
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 4px;
+  text-align: left;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+section h2 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #999;
+  padding-bottom: 5px;
+}
+
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+  width: 100%;
+  font-size: 1rem;
+}
