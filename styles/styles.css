@@ -1,31 +1,60 @@
 /* Author: Godswill Moses Ikpotokin */
 /* For my BYU Assignments only */
 
+/* Universal Selector Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: steelblue;
+  --secondary-color: #eee;
+  --text-color: #333;
+  --white: #ffffff;
+
+  --border-color: steelblue;
+  --border-light: rgb(0 0 0 / 0.2);
+  --shadow: 0 0 30px gray;
+
+  --img-width-main: 150px;
+  --img-width-aside: 200px;
+  --max-width-main: 840px;
+}
 
 main {
-  max-width: 840px;
+  max-width: var(--max-width-main);
 }
 
 nav {
-    background-color: steelblue;
-    padding: 10px;
+  background-color: var(--primary-color);
+  padding: 10px;
 }
 
 nav a {
-    color: white;
-    padding: 10px;
-    display: block;
+  color: var(--white);
+  padding: 10px;
+  display: block;
 }
+
 
 
 aside {
   width: 20rem;
-  margin: 1rem;
-  border: 1px solid rgb(0 0 0 / 0.2);
-  padding: 1rem;
-  background-color: #eee;
-  color: #333;
   text-align: center;
+  position: relative;
+}
+
+aside h2 {
+  position: absolute;
+  top: 20px;   /* adjust to fit nicely */
+  left: 50%;   /* center horizontally */
+  transform: translateX(-50%); /* ✅ perfect centering */
+  background: rgba(0, 0, 0, 0.5); /* optional: makes text readable */
+  color: white;
+  padding: 0.3rem 0.6rem;
+  border-radius: 5px;
 }
 
 
@@ -34,27 +63,29 @@ aside {
 img {
   width: 200px;
   height: auto;
-  border: 1px solid steelblue;
+  border: 1px solid var(--border-color);
   padding: 2px;
-  box-shadow: 0 0 30px gray;
+  box-shadow: var(--shadow);
 }
 
 aside img {
-  width: 200px;
+  width: var(--img-width-aside);
   height: auto;
 }
-
-
 main img {
-  width: 150px;
+  width: var(--img-width-main);
   height: auto;
-  border: 1px solid steelblue;
+  border: 1px solid var(--border-color);
   padding: 2px;
-  box-shadow: 0 0 30px gray;
+  box-shadow: var(--shadow);
+
+  float: right;
+  margin-left: 1rem;
 }
+
 
 h1 {
-    color: steelblue;
+  color: var(--primary-color);
 }
 
 p {
@@ -65,4 +96,13 @@ footer {
   margin-top: 15px;
   border-top: 1px solid #000;
   text-align: center;
+}
+
+/* Class Selectors */
+.box {
+  margin: 1rem;
+  border: 1px solid var(--border-light);
+  padding: 1rem;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
 }
