@@ -59,23 +59,24 @@ header nav ul li a {
   height: auto;
 }
 
-.hero h1 {
+h1 {
   position: absolute;
   top: 20px;
   width: 100%;
-  padding: 14px;
+  padding: 16px;
   text-align: center;
-  font-size: 2rem;
-  font-family: var(--heading-font);
-  background-color: rgba(0, 51, 102, 0.8);
+  /* font-size: 2rem; */
+  opacity: 0.7;
+  /* font-family: var(--heading-font); */
+  background-color: var(--accent1-color);
   color: #fff;
 }
 
 /* Article box overlay */
 .hero article {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
+  top: 100px;
+  right: 20px;
   background-color: rgba(0,0,0,0.6);
   color: #fff;
   padding: 15px;
@@ -84,10 +85,16 @@ header nav ul li a {
   font-size: 0.95rem;
   line-height: 1.4;
 }
+/* 
+.hero article img {
+ float: right;
+ width: 125px;
+} */
+
 
 .hero article img {
   float: right;
-  width: 120px;
+  width: 125px;
   margin-left: 10px;
   border-radius: 4px;
 }
