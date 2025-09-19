@@ -1,0 +1,130 @@
+:root {
+  --primary-color: #003366; /* navy blue */
+  --secondary-color: #ffffff; /* white */
+  --accent1-color: #1a1a1a; /* near black */
+  --accent2-color: #e9c46a; /* golden */
+  --heading-font: "Trebuchet MS", "Georgia", serif;
+  --body-font: Arial, Helvetica, sans-serif;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base */
+body {
+  font-family: var(--body-font);
+  color: var(--accent1-color);
+  background-color: var(--secondary-color);
+}
+
+/* Header */
+header {
+  padding: 20px;
+  text-align: left;
+}
+
+header img {
+  max-width: 120px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+header nav ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+header nav ul li {
+  margin: 8px 0;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+/* Hero section */
+.hero {
+  position: relative;
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hero h1 {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  padding: 14px;
+  text-align: center;
+  font-size: 2rem;
+  font-family: var(--heading-font);
+  background-color: rgba(0, 51, 102, 0.8);
+  color: #fff;
+}
+
+/* Article box overlay */
+.hero article {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background-color: rgba(0,0,0,0.6);
+  color: #fff;
+  padding: 15px;
+  max-width: 70%;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.hero article img {
+  float: right;
+  width: 120px;
+  margin-left: 10px;
+  border-radius: 4px;
+}
+
+/* Sections */
+section {
+  margin: 30px auto;
+  max-width: 900px;
+}
+
+section h2 {
+  background-color: var(--primary-color);
+  color: #fff;
+  text-align: center;
+  padding: 12px;
+  margin-bottom: 10px;
+  font-family: var(--heading-font);
+}
+
+section p {
+  padding: 10px;
+  line-height: 1.5;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin-bottom: 10px;
+}
+
+footer .socialmedia a img {
+  width: 32px;
+  margin: 0 8px;
+}
