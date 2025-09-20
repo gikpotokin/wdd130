@@ -93,7 +93,7 @@ header img {
   max-width: 120px;
   display: block;
   margin-bottom: 10px;
-  box-shadow: #fff;
+  box-shadow: 0 4px 12px var(--accent1-color);
 }
 
 header nav ul {
