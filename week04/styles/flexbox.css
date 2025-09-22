@@ -7,7 +7,11 @@ body {
     border: 3px dashed darkcyan;
     background-color: lightyellow;
     display: flex;
-    flex-wrap: wrap;
+    /* flex-direction: row; */
+    justify-content: center;
+    flex-wrap:wrap;
+    align-items: center;
+    align-content: space-around;
 }
 
 .flex-item {
@@ -17,16 +21,22 @@ body {
     padding: 0.5rem;
     background-color: #bbb;
     color: #333;
+    gap: 20px;
 }
 
 .item1 {
     min-height: 100px;
+    order: 3;
 }
 
 .item2 {
     min-height: 200px;
+    order: 1;
+    
 }
 
 .item3 {
     min-height: 300px;
+    order: 2;
+    flex-grow: 1;
 }
