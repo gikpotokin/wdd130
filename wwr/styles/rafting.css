@@ -14,138 +14,168 @@
   box-sizing: border-box;
 }
 
-/* Base */
 body {
   font-family: var(--body-font);
   color: var(--accent1-color);
   background-color: var(--secondary-color);
+  line-height: 1.6;
 }
 
-
-header, main, footer {
-  width: 840px;
-  margin: 0 auto;
-}
-/* 
-/* Header
+/* HEADER */
 header {
-  padding: 20px;
-  text-align: left;
-} */
-
-h1, h2 {
-  font-family: var(--heading-font);
-  color: var(--primary-color);
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  align-items: center;
+  background: #d6c9f2;
+  padding: 10px 20px;
 }
-
-nav, p, section, article {
-  margin: 16px;
-  padding: 8px;
-}
-
-.socialmedia a {
-    text-decoration: none;
-}
-.hero {
-  position: relative;
-}
-
-.hero img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-/* Headline on top of hero image */
-.hero h1 {
-  position: absolute;
-  top: 20px;
-  left: 0;
-  width: 100%;
-  padding: 16px;
-  text-align: center;
-  opacity: 0.8;
-  background-color: var(--accent1-color);
-  color: #fff;
-  z-index: 2;
-}
-
-/* Article overlay */
-.hero article {
-  position: absolute;
-  top: 80px;
-
-  left: 20px;
-  right: 20px;
-  padding: 16px;
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  z-index: 2;
-}
-
-.hero article img {
-  float: right;
-  width: 125px;
-  margin-left: 16px;
-}
-
 
 header img {
   max-width: 120px;
-  display: block;
-  margin-bottom: 10px;
-  box-shadow: 0 4px 12px var(--accent1-color);
 }
 
 header nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
   list-style: none;
-  padding-left: 0;
-}
-
-header nav ul li {
-  margin: 8px 0;
 }
 
 header nav ul li a {
   text-decoration: none;
   color: var(--primary-color);
   font-weight: bold;
+  padding: 6px 12px;
+  transition: 0.3s;
 }
 
-
-/* Sections */
-section {
-  margin: 30px auto;
-  max-width: 900px;
-}
-
-section h2 {
-  background-color: var(--primary-color);
+header nav ul li a:hover {
+  background: var(--accent2-color);
   color: #fff;
+  border-radius: 4px;
+}
+
+/* HERO */
+.hero {
+  position: relative;
   text-align: center;
-  padding: 12px;
-  margin-bottom: 10px;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero h1 {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
   font-family: var(--heading-font);
-}
-
-section p {
+  font-size: 2rem;
   padding: 10px;
-  line-height: 1.5;
 }
 
-/* Footer */
-footer {
+.hero article {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.hero article img {
+  width: 100px;
+  border-radius: 8px;
+}
+
+/* HISTORY */
+.history {
+  padding: 30px 20px;
+}
+
+.history h2 {
   text-align: center;
-  padding: 20px;
-  margin-top: 20px;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.history-grid {
+  display: grid;
+  grid-template-columns: 1fr 200px 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+.history img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* ADVENTURES */
+.adventures {
+  padding: 30px 20px;
+}
+
+.adventures h2 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.adventure-gallery {
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.adventure-gallery figure {
+  text-align: center;
+  width: 150px;
+}
+
+.adventure-gallery img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.adventure-gallery figcaption {
+  margin-top: 6px;
   font-size: 0.9rem;
+  font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+  background: #d6c9f2;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 footer p {
-  margin-bottom: 10px;
+  font-size: 0.9rem;
 }
 
-footer .socialmedia a img {
-  width: 32px;
-  margin: 0 8px;
+footer .socialmedia {
+  display: flex;
+  gap: 12px;
+}
+
+footer .socialmedia img {
+  width: 30px;
+  transition: 0.3s;
+}
+
+footer .socialmedia img:hover {
+  transform: scale(1.1);
 }
