@@ -3,11 +3,11 @@
   --secondary-color: #ffffff; /* white */
   --accent1-color: #1a1a1a; /* near black */
   --accent2-color: #e9c46a; /* golden */
-  --heading-font: "Trebuchet MS", "Georgia", serif;
+  --heading-font: "Trebuchet MS", Georgia, serif;
   --body-font: Arial, Helvetica, sans-serif;
 }
 
-/* Reset */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -32,6 +32,7 @@ header {
 
 header img {
   max-width: 120px;
+  height: auto;
 }
 
 header nav ul {
@@ -39,6 +40,7 @@ header nav ul {
   justify-content: center;
   gap: 20px;
   list-style: none;
+  flex-wrap: wrap; /* makes nav responsive */
 }
 
 header nav ul li a {
@@ -49,7 +51,8 @@ header nav ul li a {
   transition: 0.3s;
 }
 
-header nav ul li a:hover {
+header nav ul li a:hover,
+header nav ul li a.active {
   background: var(--accent2-color);
   color: #fff;
   border-radius: 4px;
@@ -89,10 +92,13 @@ header nav ul li a:hover {
   display: flex;
   align-items: center;
   gap: 15px;
+  border-radius: 8px;
 }
 
 .hero article img {
   width: 100px;
+  height: 100px;
+  object-fit: cover;
   border-radius: 8px;
 }
 
@@ -105,6 +111,7 @@ header nav ul li a:hover {
   text-align: center;
   color: var(--primary-color);
   margin-bottom: 20px;
+  font-family: var(--heading-font);
 }
 
 .history-grid {
@@ -128,6 +135,7 @@ header nav ul li a:hover {
   text-align: center;
   color: var(--primary-color);
   margin-bottom: 20px;
+  font-family: var(--heading-font);
 }
 
 .adventure-gallery {
@@ -153,9 +161,7 @@ header nav ul li a:hover {
   font-weight: bold;
 }
 
-
-
-/* --- CONTACT PAGE LAYOUT --- */
+/* CONTACT PAGE */
 .company-info {
   text-align: center;
   margin: 2rem 0;
@@ -168,14 +174,15 @@ header nav ul li a:hover {
   padding: 2rem;
 }
 
-.map img {
+.map iframe {
   width: 100%;
-  height: auto;
+  height: 400px;
+  border: none;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
-/* Contact Form Styling */
+/* Contact Form */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -188,7 +195,6 @@ header nav ul li a:hover {
 
 .contact-form label {
   font-weight: bold;
-  margin-bottom: 0.3rem;
 }
 
 .contact-form input,
@@ -197,6 +203,7 @@ header nav ul li a:hover {
   padding: 0.7rem;
   border: 1px solid #ccc;
   border-radius: 5px;
+  font-family: var(--body-font);
 }
 
 .contact-form fieldset {
@@ -224,17 +231,10 @@ header nav ul li a:hover {
   background: #005fa3;
 }
 
-/* Employee Profiles */
+/* EMPLOYEES */
 .employees {
   text-align: center;
   padding: 2rem;
-}
-.map iframe {
-  width: 100%;
-  height: 400px;
-  border: none;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 .employee-profiles {
@@ -261,10 +261,12 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 footer p {
   font-size: 0.9rem;
+  color: var(--primary-color);
 }
 
 footer .socialmedia {
@@ -279,4 +281,25 @@ footer .socialmedia img {
 
 footer .socialmedia img:hover {
   transform: scale(1.1);
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 768px) {
+  header {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero article {
+    flex-direction: column;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 1rem;
+  }
 }
